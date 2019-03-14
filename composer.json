@@ -20,6 +20,13 @@
             "MPorter\\VueTemplateLoader\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MPorter\\VueTemplateLoader\\ServiceProvider"
+            ]
+        }
+    },
     "config": {
         "sort-packages": true
     }
