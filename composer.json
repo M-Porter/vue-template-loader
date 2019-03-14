@@ -1,0 +1,26 @@
+{
+    "name": "m-porter/vue-template-loader",
+    "description": "Laravel package which will download your html templates as built by webpack-html-loader for use in your projects.",
+    "keywords": ["vue", "laravel", "webpack", "html", "loader"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matt Porter",
+            "email": "mtp5129@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "5.5.x|5.6.x|5.7.x|5.8.x",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "MPorter\\VueTemplateLoader\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
