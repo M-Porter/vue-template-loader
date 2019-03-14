@@ -8,10 +8,10 @@ use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 
 /**
- * Class VueLoader
+ * Class Loader
  * @package MPorter\VueTemplateLoader
  */
-class VueLoader
+class Loader
 {
     /**
      * @param string $name
