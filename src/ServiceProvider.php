@@ -2,7 +2,6 @@
 
 namespace MPorter\VueTemplateLoader;
 
-
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 /**

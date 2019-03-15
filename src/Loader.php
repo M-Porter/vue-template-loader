@@ -2,7 +2,6 @@
 
 namespace MPorter\VueTemplateLoader;
 
-
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
