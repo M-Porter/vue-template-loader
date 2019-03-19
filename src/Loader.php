@@ -4,6 +4,7 @@ namespace MPorter\VueTemplateLoader;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
 
 /**
@@ -18,7 +19,7 @@ class Loader
      */
     public static function getTemplate(string $name): string
     {
-        if (config('vue-loader.enabled') && config('app.env') === 'local') {
+        if (App::isLocal()) {
             $dir = resource_path('views/vue');
             if (!is_dir($dir)) {
                 mkdir($dir, 0755, true);
@@ -41,7 +42,7 @@ class Loader
         $tmpResource = fopen('php://tmp', 'w');
 
         $client = new Client([
-            'base_uri' => config('vue-loader.webpack_endpoint'),
+            'base_uri' => config('vue_loader.webpack_endpoint'),
         ]);
 
         try {
@@ -55,7 +56,7 @@ class Loader
             }
         } catch (GuzzleException $e) {
             Log::notice('[VueLoader] Failed saving stream.', [
-                'base_uri' => config('vue-loader.webpack_endpoint'),
+                'base_uri' => config('vue_loader.webpack_endpoint'),
                 'template' => $name,
                 'filepath' => $filepath,
             ]);

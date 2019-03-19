@@ -18,7 +18,7 @@ class ServiceProvider extends BaseServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/vue-loader.php' => config_path('vue-loader.php'),
+            __DIR__.'/../config/vue_loader.php' => config_path('vue_loader.php'),
         ]);
     }
 }
