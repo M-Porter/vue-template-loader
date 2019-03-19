@@ -39,7 +39,7 @@ class Loader
      */
     public static function saveTemplate(string $name, string $filepath)
     {
-        $tmpResource = fopen('php://tmp', 'w');
+        $tmpResource = fopen('php://temp', 'w');
 
         $client = new Client([
             'base_uri' => config('vue_loader.webpack_endpoint'),
