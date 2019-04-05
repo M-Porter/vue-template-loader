@@ -40,6 +40,7 @@ class Loader
     {
         $ch = curl_init(self::buildUrl($name));
 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
