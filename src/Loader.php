@@ -17,7 +17,7 @@ class Loader
      */
     public static function getTemplate(string $name): string
     {
-        if (App::isLocal()) {
+        if (App::environment('local')) {
             $dir = resource_path('views/vue');
 
             if (!is_dir($dir)) {
