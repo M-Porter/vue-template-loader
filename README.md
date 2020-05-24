@@ -6,9 +6,15 @@ Laravel package which will download your html templates as built by webpack-html
 
 Require this package with composer.
 
-```
-composer require m-porter/vue-template-loader
-```
+- Laravel 6, 7
+    ```
+    composer require m-porter/vue-template-loader "^6.0.0"
+    ```
+
+- Laravel ^5.5,<5.9
+    ```
+    composer require m-porter/vue-template-loader "^0.2.0"
+    ```
 
 ### Laravel 5.5+:
 
